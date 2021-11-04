@@ -18,6 +18,8 @@ namespace Teste.Loja.Domain.Shared.Interfaces
 
         void Remove(TEntidade entidade);
 
+        bool Exists(Expression<Func<TEntidade, bool>> predicate);
+
         void Save();
     }
 }

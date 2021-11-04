@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using Teste.Loja.Domain.Shared.Responses;
+
 namespace Teste.Loja.Domain.Core.Responses
 {
-    public class UpdateProdutoResponse
+    public class UpdateProdutoResponse : Response
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }

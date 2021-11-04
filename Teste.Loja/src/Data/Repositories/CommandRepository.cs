@@ -21,6 +21,11 @@ namespace Teste.Loja.Infra.Data.Repositories
             _context.Set<TEntidade>().Add(entidade);    
         }
 
+        public bool Exists(Expression<Func<TEntidade, bool>> predicate)
+        {
+            return _context.Set<TEntidade>().Any(predicate);
+        }
+
         public IEnumerable<TEntidade> Get(Expression<Func<TEntidade, bool>> predicate)
         {
             return _context.Set<TEntidade>().Where(predicate);         

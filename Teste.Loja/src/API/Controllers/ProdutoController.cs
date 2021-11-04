@@ -74,11 +74,9 @@ namespace Teste.Loja.API.Controllers
         {
             try
             {
-                request.Id = id;
-
-                var response = _update.Handle(request);
-
-                return Ok(response);
+                request.SetId(id);
+                 
+                return Ok(_update.Handle(request));
             }
             catch(Exception ex)
             {

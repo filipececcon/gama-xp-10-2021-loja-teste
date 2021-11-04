@@ -11,6 +11,8 @@
     <None Remove="Requests\" />
     <None Remove="Responses\" />
     <None Remove="Queries\" />
+    <None Remove="Validators\" />
+    <None Remove="FluentValidation" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -18,8 +20,12 @@
     <Folder Include="Requests\" />
     <Folder Include="Responses\" />
     <Folder Include="Queries\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.4" />
   </ItemGroup>
 </Project>
