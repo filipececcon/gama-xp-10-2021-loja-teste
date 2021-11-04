@@ -8,8 +8,8 @@ namespace Teste.Loja.Domain.Core.Validators
     {
         public AddProdutoRequestValidator()
         {
-
-            //todo: implementar a validaçao para add um novo produto no sistema
+            RuleFor(x => x.Nome).NotEmpty().NotNull();
+            RuleFor(x => x.ValorUnitario).NotNull().NotEmpty().GreaterThan(0);           
         }
     }
 }

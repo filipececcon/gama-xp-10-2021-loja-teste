@@ -15,7 +15,7 @@ namespace Teste.Loja.Domain.Shared.Handlers
 
         public abstract IValidator<TRequest> Validator { get; }
 
-        protected TResponse _response { get; set; }
+        protected TResponse _response { get; }
 
         public CommandHandler(ICommandRepository<TEntidade> repository)
         {

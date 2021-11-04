@@ -8,8 +8,6 @@ namespace Teste.Loja.Domain.Core.Requests
         public decimal ValorUnitario { get; set; }
 
         public Guid GetId() => _id;
-
         public void SetId(Guid id) => _id = id;
-        
     }
 }

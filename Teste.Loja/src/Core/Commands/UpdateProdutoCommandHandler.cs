@@ -22,7 +22,7 @@ namespace Teste.Loja.Domain.Core.Commands
         {
             var existe = _repository.Exists(x => x.Id == request.GetId());
 
-            if (!existe) _response.Errors.Add("produto não existe");
+            if (existe) _response.Errors.Add("produto não existe");
         }
 
         protected override Produto Changes(UpdateProdutoRequest request)

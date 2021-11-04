@@ -13,6 +13,16 @@ namespace Teste.Loja.Infra.Data
             Database.EnsureCreated();
         }
 
+        public MercadoContext(string connectionString) : base(GetOptions(connectionString))
+        {
+            Database.EnsureCreated();
+        }
+
+        private static DbContextOptions GetOptions(string connectionString)
+        {
+            return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             new ProdutoConfig().Configure(modelBuilder.Entity<Produto>());
