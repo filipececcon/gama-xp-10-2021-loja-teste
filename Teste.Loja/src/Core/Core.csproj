@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Teste.Loja.Domain.Core</RootNamespace>
+    <AssemblyName>Teste.Loja.Domain.Core</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

@@ -5,6 +5,7 @@
 
     <IsPackable>false</IsPackable>
     <RootNamespace>Test.Loja.Test</RootNamespace>
+    <AssemblyName>Teste.Loja.Test</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
